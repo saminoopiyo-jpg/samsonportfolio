@@ -3,505 +3,438 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samson Matowe Opiyo | Portfolio</title>
-  <meta name="description" content="Frontend Web Developer, IT Support Specialist & Creative Designer based in Nairobi, Kenya">
-  <link rel="stylesheet" href="styles.css">
+  <title>Samson Matowe Opiyo | Frontend Developer</title>
+  <meta name="description" content="Frontend Web Developer, IT Support Specialist & Creative Designer based in Nairobi, Kenya. Building responsive, modern websites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Preloader -->
-  <div id="preloader">
-    <div class="preloader-inner">
+  <div id="preloader" aria-hidden="true">
+    <div class="loader">
       <div class="loader-ring"></div>
-      <span class="loader-text">S.</span>
+      <span class="loader-text">Samson</span>
     </div>
   </div>
 
-  <!-- Scroll to top -->
   <a href="#home" class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
+    <i class="fas fa-arrow-up"></i>
   </a>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="logo">
-        <span class="logo-text">SAMSON</span><span class="logo-dot">.</span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <!-- Floating navigation -->
+  <nav class="navbar" id="navbar" aria-label="Main">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+      <li><a href="#process" class="nav-link">Process</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">
+      <span class="cta-dot"></span>
+      Hire me
+    </a>
+    <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
-
-  <!-- Mobile Nav Overlay -->
   <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- Full-page looping video background -->
+  <div class="page-video-wrap" aria-hidden="true">
+    <video
+      id="bgVideo"
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    >
+      <source src="image/background.mp4" type="video/mp4">
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
 
   <!-- Hero -->
   <header id="home" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content" data-aos="fade-up">
-      <div class="hero-badge">
-        <span class="badge-dot"></span> Available for Internships & Projects
-      </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Frontend Developer · Nairobi, Kenya</p>
       <h1 class="hero-title">
-        <span class="line1">Samson</span>
-        <span class="line2">Matowe Opiyo</span>
+        Helping brands deliver<br>
+        <span class="gradient-text">pixel-perfect websites</span><br>
+        without the overhead of an in-house team.
       </h1>
-      <div class="hero-typed-wrap">
-        <span class="typed-prefix">I am a </span>
-        <span class="typed-text" id="typedText"></span>
-        <span class="typed-cursor">|</span>
-      </div>
-      <p class="hero-description">
-        Crafting elegant digital experiences with code and creativity. Passionate about building responsive interfaces and impactful multimedia content.
+      <p class="hero-sub">
+        I build responsive, modern interfaces and craft the design systems that make them feel alive.
       </p>
-      <div class="hero-buttons">
-        <a href="SAMSON MATOWE OPIYO CV01.pdf" class="btn btn-outline" target="_blank" download>
-          <i class="fas fa-download"></i> Download CV
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">
+          Work with me <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#about" class="btn btn-secondary">
+          <i class="fas fa-user"></i> About me
         </a>
       </div>
-      <div class="hero-socials">
-        <a href="mailto:samsonmatowe220@gmail.com" class="social-icon" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="tel:+254769532064" class="social-icon" aria-label="Phone">
-          <i class="fas fa-phone"></i>
-        </a>
-        <a href="#contact" class="social-icon" aria-label="Contact">
-          <i class="fas fa-paper-plane"></i>
-        </a>
+      <div class="hero-proof">
+        <div class="avatar-stack">
+          <img src="image/mypic1.png" alt="Samson Matowe Opiyo" class="avatar avatar-photo">
+          <span class="avatar avatar-icon"><i class="fas fa-code"></i></span>
+          <span class="avatar avatar-icon"><i class="fas fa-palette"></i></span>
+        </div>
+        <div class="proof-text">
+          <p><strong>3+ successful projects</strong></p>
+          <a href="#work" class="proof-link">View real projects <i class="fas fa-chevron-right"></i></a>
+        </div>
       </div>
-    </div>
-    <div class="hero-profile-wrap" data-aos="fade-left" data-aos-delay="200">
-      <div class="hero-profile-ring">
-        <img src="image/samsonpin2.jpg" alt="Samson Matowe Opiyo" class="hero-profile-img">
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </header>
 
-  <!-- Stats Bar -->
-  <section class="stats-bar">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item" data-aos="fade-up">
-          <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Projects Delivered</span>
+  <!-- Experience bar -->
+  <div class="experience-bar">
+    <p>2+ YEARS OF DESIGN & DEVELOPMENT EXPERIENCE</p>
+  </div>
+
+  <!-- Logos / credibility -->
+  <section class="logos" aria-label="Skills & tools">
+    <div class="logos-track">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>Responsive Design</span>
+      <span>UI/UX</span>
+      <span>Multimedia</span>
+      <span>IT Support</span>
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>Responsive Design</span>
+      <span>UI/UX</span>
+      <span>Multimedia</span>
+      <span>IT Support</span>
+    </div>
+  </section>
+
+  <!-- Work / Projects -->
+  <section id="work" class="section work">
+    <div class="section-head">
+      <p class="section-label">Selected Work</p>
+      <h2>Real projects that solve real problems</h2>
+      <p class="section-desc">A selection of websites and systems I've built — focused on clarity, performance and user experience.</p>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card">
+        <a href="https://propertyerp.infinityfreeapp.com/" target="_blank" rel="noopener noreferrer" class="project-media" aria-label="Open Property ERP System (live demo — under testing)">
+          <img src="image/properp.png" alt="Property ERP System" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-tag">Web App · Testing</span>
+            <span class="project-live-btn"><i class="fas fa-external-link-alt"></i> View live site</span>
+          </div>
+        </a>
+        <div class="project-body">
+          <h3>Property ERP System</h3>
+          <p>A property management ERP under testing — listings, tenants and operations in one place.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="https://propertyerp.infinityfreeapp.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Visit site <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-          <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Years Experience</span>
+      </article>
+      <article class="project-card">
+        <a href="https://saminoopiyo-jpg.github.io/projectsample1agentrealtors/" target="_blank" rel="noopener noreferrer" class="project-media" aria-label="Open TenantTrust Agent Realtors (live demo)">
+          <img src="image/agenthose.png" alt="TenantTrust — Agent Realtors" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-tag">Website · Live</span>
+            <span class="project-live-btn"><i class="fas fa-external-link-alt"></i> View live site</span>
+          </div>
+        </a>
+        <div class="project-body">
+          <h3>TenantTrust — Agent Realtors</h3>
+          <p>Nairobi property agency site with listings, search and a clean conversion-focused layout.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="https://saminoopiyo-jpg.github.io/projectsample1agentrealtors/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Visit site <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-          <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Tech Skills</span>
+      </article>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="image/onlinetrans.png" alt="Online School Transport Booking System" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-tag">Web App</span>
+          </div>
         </div>
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-          <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
-          <span class="stat-label">Commitment</span>
+        <div class="project-body">
+          <h3>Online School Transport Booking</h3>
+          <p>A full booking system for school transport with clean UI, form handling and responsive layout.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
         </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section id="capabilities" class="section capabilities">
+    <div class="section-head">
+      <p class="section-label">Capabilities</p>
+      <h2>What I bring to the table</h2>
+    </div>
+    <div class="capabilities-grid">
+      <div class="cap-card">
+        <div class="cap-icon"><i class="fas fa-code"></i></div>
+        <h3>Frontend Development</h3>
+        <p>Clean, semantic HTML, modern CSS and vanilla JavaScript. Responsive layouts that feel native on every device.</p>
+        <ul>
+          <li>Responsive & mobile-first</li>
+          <li>Performance-minded code</li>
+          <li>Accessible interfaces</li>
+        </ul>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><i class="fas fa-palette"></i></div>
+        <h3>UI & Visual Design</h3>
+        <p>From logos and posters to full page layouts. I design with intention so every screen feels cohesive.</p>
+        <ul>
+          <li>Brand-aligned visuals</li>
+          <li>Typography & color systems</li>
+          <li>Multimedia content</li>
+        </ul>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><i class="fas fa-headset"></i></div>
+        <h3>IT Support</h3>
+        <p>Hands-on experience troubleshooting hardware, software and digital infrastructure for organizations.</p>
+        <ul>
+          <li>Hardware & software support</li>
+          <li>System optimization</li>
+          <li>User guidance</li>
+        </ul>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><i class="fas fa-video"></i></div>
+        <h3>Multimedia</h3>
+        <p>Video production, promotional materials and content that supports campaigns and community engagement.</p>
+        <ul>
+          <li>Video & motion</li>
+          <li>Print & digital assets</li>
+          <li>Content creation</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- Process -->
+  <section id="process" class="section process">
+    <div class="section-head">
+      <p class="section-label">Process</p>
+      <h2>Simple process. Clear results.</h2>
+      <p class="section-desc">No endless back-and-forth. Just a focused path from idea to polished delivery.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>Discover</h3>
+        <p>We talk about goals, audience and constraints so the solution actually fits the problem.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>Design</h3>
+        <p>Structure, visuals and interactions are planned so everything feels intentional and cohesive.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>Build</h3>
+        <p>I develop the frontend with clean code, responsive behaviour and attention to detail.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <h3>Deliver</h3>
+        <p>You get a polished, ready-to-use result with clear handoff and room for iteration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About — clear profile photos -->
   <section id="about" class="section about">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Who I Am</span>
-        <h2>About Me</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-image-wrap" data-aos="fade-right">
-          <div class="about-img-container">
-            <img src="image/samsonpic.png" alt="Samson Matowe" class="about-img">
-            <div class="about-img-badge">
-              <i class="fas fa-code"></i>
-              <span>Frontend Dev</span>
-            </div>
-          </div>
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-wrap">
+          <img src="image/profile-pic-2.png" alt="Samson Matowe Opiyo — profile portrait" class="about-photo">
         </div>
-        <div class="about-text" data-aos="fade-left">
-          <h3>Frontend Developer & Creative Designer based in Nairobi, Kenya</h3>
-          <p>Motivated and detail-oriented IT professional currently pursuing a <strong>Diploma in Information Technology</strong> at Jomo Kenyatta University of Agriculture and Technology (JKUAT).</p>
-          <p>I specialize in frontend web development and multimedia design, with hands-on experience creating responsive interfaces and digital content for organizations and community projects.</p>
-          <p>Committed to delivering clean, user-centered solutions and continuously expanding my skill set in modern web technologies.</p>
-          <div class="about-info-grid">
-            <div class="info-item">
-              <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location</span>
-              <span class="info-value">Nairobi, Kenya</span>
-            </div>
-            <div class="info-item">
-              <span class="info-label"><i class="fas fa-envelope"></i> Email</span>
-              <span class="info-value">samsonmatowe220@gmail.com</span>
-            </div>
-            <div class="info-item">
-              <span class="info-label"><i class="fas fa-phone"></i> Phone</span>
-              <span class="info-value">+254 769 532 064</span>
-            </div>
-            <div class="info-item">
-              <span class="info-label"><i class="fas fa-graduation-cap"></i> Degree</span>
-              <span class="info-value">Diploma in IT (JKUAT)</span>
-            </div>
-          </div>
-          <div class="about-actions">
-            <a href="SAMSON MATOWE OPIYO CV01.pdf" class="btn btn-primary" download>
-              <i class="fas fa-download"></i> Download CV
-            </a>
-            <a href="#contact" class="btn btn-outline-dark">
-              <i class="fas fa-paper-plane"></i> Hire Me
-            </a>
-          </div>
+        <div class="about-photo-secondary">
+          <img src="image/profile-pic.png" alt="Samson Matowe Opiyo" class="about-photo-sm">
+        </div>
+        <div class="about-badge">
+          <span class="badge-dot"></span>
+          Open to internships & projects
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section skills-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">What I Know</span>
-        <h2>Technical Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-category" data-aos="fade-up">
-          <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>Web Development</h3>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>HTML5 / CSS3</span><span>90%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+      <div class="about-content">
+        <p class="section-label">About</p>
+        <h2>Hi, I'm Samson Matowe Opiyo</h2>
+        <p>I'm a motivated, detail-oriented IT student pursuing a <strong>Diploma in Information Technology</strong> at Jomo Kenyatta University of Agriculture and Technology (JKUAT).</p>
+        <p>I focus on frontend web development and multimedia design, with hands-on experience building responsive interfaces and digital content for organizations and community projects.</p>
+        <p>I like clean, user-centered work — and I keep growing my modern web skills every day.</p>
+        <div class="about-meta">
+          <div class="meta-item">
+            <i class="fas fa-location-dot"></i>
+            <div>
+              <small>Location</small>
+              <span>Nairobi, Kenya</span>
             </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>JavaScript</span><span>75%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+          <div class="meta-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+              <small>Education</small>
+              <span>Diploma in IT · JKUAT</span>
             </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>PHP</span><span>65%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+          </div>
+          <div class="meta-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <small>Email</small>
+              <span>samsonmatowe220@gmail.com</span>
             </div>
           </div>
         </div>
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-          <div class="skill-icon"><i class="fas fa-palette"></i></div>
-          <h3>Design & Graphics</h3>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>Canva</span><span>85%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>Logo & Poster Design</span><span>80%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>PageMaker / Flex</span><span>70%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-          <div class="skill-icon"><i class="fas fa-video"></i></div>
-          <h3>Multimedia</h3>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>Video Editing</span><span>80%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>Advert Creation</span><span>75%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-info"><span>Promotional Content</span><span>85%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-          <div class="skill-icon"><i class="fas fa-tools"></i></div>
-          <h3>Other Skills</h3>
-          <div class="skill-tags">
-            <span class="stag">IT Support</span>
-            <span class="stag">Troubleshooting</span>
-            <span class="stag">Content Writing</span>
-            <span class="stag">VS Code</span>
-            <span class="stag">MySQL</span>
-            <span class="stag">GitHub</span>
-          </div>
+        <div class="about-actions">
+          <a href="#contact" class="btn btn-primary">Let's talk <i class="fas fa-arrow-right"></i></a>
+          <a href="mailto:samsonmatowe220@gmail.com" class="btn btn-secondary">Email me</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="section experience-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">My Journey</span>
-        <h2>Experience</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-marker">
-            <i class="fas fa-laptop"></i>
-          </div>
-          <div class="timeline-body">
-            <div class="timeline-meta">
-              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Feb – Apr 2025</span>
-              <span class="timeline-type work">Work</span>
-            </div>
-            <h3>IT Support Attaché</h3>
-            <h4><i class="fas fa-building"></i> Kenya Institute of Supplies Examination Board (KISEB)</h4>
-            <ul>
-              <li>Provided comprehensive IT support including hardware and software troubleshooting</li>
-              <li>Assisted in optimizing organizational systems and websites</li>
-              <li>Contributed to digital infrastructure maintenance</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="timeline-marker">
-            <i class="fas fa-photo-video"></i>
-          </div>
-          <div class="timeline-body">
-            <div class="timeline-meta">
-              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Sep 2023 – Present</span>
-              <span class="timeline-type design">Design</span>
-            </div>
-            <h3>Multimedia Designer (Volunteer)</h3>
-            <h4><i class="fas fa-building"></i> Church Media Team</h4>
-            <ul>
-              <li>Designed logos, posters, and promotional materials</li>
-              <li>Produced high-quality advert videos and multimedia content</li>
-              <li>Supported digital campaigns for community engagement</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="timeline-marker">
-            <i class="fas fa-pen-nib"></i>
-          </div>
-          <div class="timeline-body">
-            <div class="timeline-meta">
-              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jun 2024 – Jan 2025</span>
-              <span class="timeline-type content">Content</span>
-            </div>
-            <h3>Content Creator</h3>
-            <h4><i class="fas fa-building"></i> WriterzHub.com</h4>
-            <ul>
-              <li>Created engaging, research-driven digital content</li>
-              <li>Delivered content across multiple client platforms</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <!-- Experience / Journey -->
+  <section class="section journey">
+    <div class="section-head">
+      <p class="section-label">Journey</p>
+      <h2>Where I've been helping out</h2>
     </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">My Work</span>
-        <h2>Featured Projects</h2>
-      </div>
-      <div class="projects-grid">
-
-        <div class="project-card" data-aos="fade-up">
-          <div class="project-img-wrap">
-            <img src="image/onlinetrans.png" alt="Online School Transport Booking System" class="project-img">
-            <div class="project-overlay">
-              <div class="project-overlay-content">
-                <h3>Online School Transport Booking System</h3>
-                <p>View Project Details</p>
-              </div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
-            <h3>Online School Transport Booking</h3>
-            <p>A responsive web prototype that allows parents to book student transportation services with secure login and real-time booking features.</p>
-          </div>
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Feb – Apr 2025</span>
+          <h3>IT Support Attaché</h3>
+          <p class="timeline-org">Kenya Institute of Supplies Examination Board (KISEB)</p>
+          <ul>
+            <li>Provided IT support including hardware and software troubleshooting</li>
+            <li>Helped optimize organizational systems and websites</li>
+            <li>Contributed to digital infrastructure maintenance</li>
+          </ul>
         </div>
-
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-img-wrap">
-            <img src="image/churchwebsite.png" alt="Church Website" class="project-img">
-            <div class="project-overlay">
-              <div class="project-overlay-content">
-                <h3>Church Website</h3>
-                <p>View Project Details</p>
-              </div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>PHP</span>
-            </div>
-            <h3>Church Website</h3>
-            <p>Modern responsive website with login functionality to improve member communication and engagement across the congregation.</p>
-          </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Sep 2023 – Present</span>
+          <h3>Multimedia Designer (Volunteer)</h3>
+          <p class="timeline-org">Church Media Team</p>
+          <ul>
+            <li>Designed logos, posters and promotional materials</li>
+            <li>Produced advert videos and multimedia content</li>
+            <li>Supported digital campaigns for community engagement</li>
+          </ul>
         </div>
-
-        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="project-img-wrap">
-            <img src="image/agenthose.png" alt="Agent Hose Project" class="project-img">
-            <div class="project-overlay">
-              <div class="project-overlay-content">
-                <h3>Agent Hose</h3>
-                <p>View Project Details</p>
-              </div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
-            </div>
-            <h3>Agent Hose</h3>
-            <p>A professional web project featuring clean design and dynamic functionality for an optimized digital experience.</p>
-          </div>
+      </article>
+      <article class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Jun 2024 – Jan 2025</span>
+          <h3>Content Creator</h3>
+          <p class="timeline-org">WriterzHub.com</p>
+          <ul>
+            <li>Created engaging, research-driven digital content</li>
+            <li>Delivered content across multiple client platforms</li>
+          </ul>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section class="section education-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Academic Background</span>
-        <h2>Education</h2>
-      </div>
-      <div class="edu-grid">
-        <div class="edu-card" data-aos="fade-up">
-          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-          <div class="edu-content">
-            <span class="edu-date">Jan 2024 – Present</span>
-            <h3>Diploma in Information Technology</h3>
-            <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
-          </div>
-        </div>
-        <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="edu-icon"><i class="fas fa-certificate"></i></div>
-          <div class="edu-content">
-            <span class="edu-date">Sep 2023 – Dec 2023</span>
-            <h3>Certificate in Information Technology</h3>
-            <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
-          </div>
-        </div>
-      </div>
+      </article>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Get In Touch</span>
-        <h2>Let's Connect</h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info-wrap" data-aos="fade-right">
-          <p class="contact-intro">Open to internship opportunities, collaborations, and exciting web development projects. Let's build something great together.</p>
-          <div class="contact-cards">
-            <a href="mailto:samsonmatowe220@gmail.com" class="contact-card">
-              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <span class="contact-card-label">Email</span>
-                <span class="contact-card-value">samsonmatowe220@gmail.com</span>
-              </div>
-            </a>
-            <a href="tel:+254769532064" class="contact-card">
-              <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
-              <div>
-                <span class="contact-card-label">Phone</span>
-                <span class="contact-card-value">+254 769 532 064</span>
-              </div>
-            </a>
-            <div class="contact-card">
-              <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <span class="contact-card-label">Location</span>
-                <span class="contact-card-value">Nairobi, Kenya</span>
-              </div>
-            </div>
+  <section id="contact" class="section contact">
+    <div class="contact-card">
+      <div class="contact-left">
+        <p class="section-label">Contact</p>
+        <h2>Let's build something great together</h2>
+        <p>I'm open to internships, collaborations and web projects. Drop a message — I'll get back to you soon.</p>
+        <div class="contact-details">
+          <a href="mailto:samsonmatowe220@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i>
+            <span>samsonmatowe220@gmail.com</span>
+          </a>
+          <a href="tel:+254769532064" class="contact-link">
+            <i class="fas fa-phone"></i>
+            <span>+254 769 532 064</span>
+          </a>
+          <div class="contact-link">
+            <i class="fas fa-clock"></i>
+            <span>Local time · <span id="clock">--:--</span></span>
           </div>
         </div>
-        <div class="contact-form-wrap" data-aos="fade-left">
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-            <div class="form-status" id="formStatus"></div>
-          </form>
-        </div>
+        <p class="contact-location"><i class="fas fa-map-marker-alt"></i> Based in Nairobi, Kenya</p>
       </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+          Send message <i class="fas fa-paper-plane"></i>
+        </button>
+        <div class="form-status" id="formStatus" role="status"></div>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="logo-text">SAMSON</span><span class="logo-dot">.</span>
-          <p>Crafting elegant digital experiences with code and creativity.</p>
-        </div>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-socials">
-          <a href="mailto:samsonmatowe220@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <a href="tel:+254769532064" aria-label="Phone"><i class="fas fa-phone"></i></a>
-        </div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo">Samson<span>.</span></a>
+        <p>Frontend developer & creative designer based in Nairobi.</p>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Samson Matowe Opiyo. All Rights Reserved.</p>
-        <p>Crafted with <i class="fas fa-heart" style="color:#ef4444"></i> in Nairobi</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="mailto:samsonmatowe220@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+254769532064" aria-label="Phone"><i class="fas fa-phone"></i></a>
       </div>
     </div>
+    <p class="footer-copy">&copy; 2026 Samson Matowe Opiyo. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
